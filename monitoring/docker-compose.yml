@@ -18,6 +18,8 @@ services:
     privileged: true
     devices:
       - /dev/kmsg:/dev/kmsg
+    environment:
+      - DOCKER_CGROUP_DRIVER=cgroupfs  # Forces cgroup v1 compatibility
     volumes:
       - /:/rootfs:ro
       - /var/run:/var/run:ro
