@@ -11,6 +11,8 @@ services:
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: example
+    volumes:
+      - ./data:/data/db
 
 
   mongo-express:
@@ -24,3 +26,6 @@ services:
       ME_CONFIG_BASICAUTH_USERNAME: "user"
       ME_CONFIG_BASICAUTH_PASSWORD: "password"
       ME_CONFIG_BASICAUTH: true
+
+volumes:
+  mongo-session9:
